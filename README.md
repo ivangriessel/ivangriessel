@@ -1,9 +1,8 @@
 👋 Hi, I’m @ivangriessel
+I am a Data Analyst based in the UK, currently working in HealthTech in Locales across Europe. Previously I worked as a Senior UX Designer in the same industry.
 
 👀 I’m interested in the power of data to drive decision-making and power tools that improve lives
 🌱 I’m currently learning more about data analytics, SQL, Python and Machine Learning
-
-Watch this space for more to come as I grow my skills in this space
 
 
 <!---
