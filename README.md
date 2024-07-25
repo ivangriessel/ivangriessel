@@ -1,10 +1,24 @@
-👋 Hi, I’m @ivangriessel
-I'm a Product designer currently working in HealthTech in markets across Europe.
+# README
 
-When I'm not in front of my computer I like to be outside hiking and on the water with my wife and our hungarian vizsla, Luna. I'm originally from Cape Town, South Africa, but now call the City of Norwich, England my home.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
+Things you may want to cover:
 
-<!---
-ivangriessel/ivangriessel is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
