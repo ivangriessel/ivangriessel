@@ -63,7 +63,7 @@ module.exports = {
               dark: colors.black
             },
             low: {
-              DEFAULT: colors.stone[600],
+              DEFAULT: 'rgba(0, 0, 0, 0.76)',
               dark: colors.stone[300]
             },
         },
@@ -72,7 +72,7 @@ module.exports = {
             dark: translucent.white2
         },
         background: {
-            DEFAULT: 'hsla(210, 15%, 95%, 1)',
+            DEFAULT: 'F4F2F0',
             dark: '#212121'
         },
         warn: {

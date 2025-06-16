@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html class="bg-background">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,15 +12,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="src/output.css">
     </head>
-    <body class="bg-background min-h-screen flex items-center px-6">
-        <header class="w-full max-w-7xl mx-auto">
-            <div class="flex flex-col gap-6 max-w-2xl">
-                <h1 class="text-4xl md:text-8xl font-bold text-fg-high">Hi, my name is Ivan Griessel.</h1>
-                <p class="text-2xl">
-                    I’m a <strong>lead product designer</strong>, 
-                    with a strong background in visual design and a keen interest in the tech that my designs run on.
-                </p>
-            </div>
-        </header>
+    <body class=" min-h-screen px-6 py-8 flex">
+        <div class="w-full max-w-6xl mx-auto flex flex-col justify-between">
+            <nav class="flex justify-between items-center">
+                <img src="./assets/images/logo.svg" alt="Ivan Griessel logo">
+                <!-- <ul class="flex gap-12">
+                    <li><a href="#" class="text-fg-high font-semibold text-2xl hover:underline hover:decoration-4">Work.</a></li>
+                    <li><a href="#" class="text-fg-high font-semibold text-2xl hover:underline hover:decoration-4">About me.</a></li>
+                    <li><a href="#" class="text-fg-high font-semibold text-2xl hover:underline hover:decoration-4">Contact.</a></li>
+                </ul> -->
+            </nav>
+    
+            <header>
+                <div class="flex flex-col gap-6 max-w-2xl">
+                    <h1 class="text-6xl md:text-8xl font-bold text-fg-high">Hi, my name is Ivan Griessel.</h1>
+                    <p class="text-lg md:text-2xl text-fg-high">
+                        I'm a Product Designer with a coding habit. 
+                        I'm deeply interestedin user interfaces, our relationship with technology and the positive power of the internet.</p>
+                    <p class="text-lg md:text-2xl text-fg-high">
+                        Currently <strong class="text-fg-high">Lead Product Designer</strong> at <a href="https://healios.org.uk/" target="_blank" class="underline decoration-2 hover:decoration-4">Healios</a>.
+                    </p>
+                </div>
+            </header>
+
+            <footer class="py-7 text-black/40">© Ivan Griessel. 2025.</footer>
+        </div>
     </body>
 </html>
