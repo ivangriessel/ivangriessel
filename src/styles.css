@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../assets/fonts/AvenirNext-Bold.eot');
+  src:
+    url('../assets/fonts/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/AvenirNext-Bold.woff2') format('woff2'),
+    url('../assets/fonts/AvenirNext-Bold.woff') format('woff'),
+    url('../assets/fonts/AvenirNext-Bold.ttf') format('truetype'),
+    url('../assets/fonts/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../assets/fonts/AvenirNext-DemiBold.eot');
+  src:
+    url('../assets/fonts/AvenirNext-DemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/AvenirNext-DemiBold.woff2') format('woff2'),
+    url('../assets/fonts/AvenirNext-DemiBold.woff') format('woff'),
+    url('../assets/fonts/AvenirNext-DemiBold.ttf') format('truetype'),
+    url('../assets/fonts/AvenirNext-DemiBold.svg#AvenirNext-DemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../assets/fonts/AvenirNext-Regular.eot');
+  src:
+    url('../assets/fonts/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/AvenirNext-Regular.woff2') format('woff2'),
+    url('../assets/fonts/AvenirNext-Regular.woff') format('woff'),
+    url('../assets/fonts/AvenirNext-Regular.ttf') format('truetype'),
+    url('../assets/fonts/AvenirNext-Regular.svg#AvenirNext-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #f4f2f0;
+  --text-high: #000;
+  --text-muted: rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  display: flex;
+  background: var(--background);
+  color: var(--text-high);
+  font-family: 'Avenir Next', system-ui, sans-serif;
+}
+
+.site-shell {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 42rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 4px;
+}
+
+footer {
+  padding: 1.75rem 0;
+  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5.25rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
