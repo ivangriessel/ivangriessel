@@ -3,6 +3,7 @@ const md = new markdownIt();
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addFilter("md", (content) => md.renderInline(content));
 
   return {
