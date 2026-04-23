@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title if title else "Ivan Griessel" }} | Product Designer</title>
+    <meta name="description" content="{{ description if description else '8+ years in HealthTech. Product Designer and Illustrator.' }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              avenir: ['"Avenir Next"', 'system-ui', 'sans-serif'],
+              inter: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              cream: '#f8f4f1',
+              muted: '#555555',
+              yellow: '#fdc111',
+            },
+            boxShadow: {
+              brutal: '4px 4px 0 0 #000',
+            },
+          },
+        },
+      }
+    </script>
+
+    <style>
+      @font-face {
+        font-family: 'Avenir Next';
+        src: url('/assets/fonts/AvenirNext-Bold.woff2') format('woff2'),
+             url('/assets/fonts/AvenirNext-Bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Avenir Next';
+        src: url('/assets/fonts/AvenirNext-DemiBold.woff2') format('woff2'),
+             url('/assets/fonts/AvenirNext-DemiBold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Avenir Next';
+        src: url('/assets/fonts/AvenirNext-Regular.woff2') format('woff2'),
+             url('/assets/fonts/AvenirNext-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+  </head>
+
+  <body class="bg-cream text-black font-inter antialiased">
+
+    <nav class="bg-cream border-b border-black/10 sticky top-0 z-50">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28 py-4 flex justify-between items-center">
+        <a href="/" class="font-avenir font-bold text-lg hover:opacity-70 transition-opacity">Ivan Griessel.</a>
+        <div class="flex gap-8 items-center font-avenir font-bold text-lg">
+          <a href="/#work" class="hover:opacity-70 transition-opacity">Work.</a>
+          <a href="/#about" class="hover:opacity-70 transition-opacity">About.</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28 py-10 text-black/40 text-sm font-inter">
+      © Ivan Griessel. 2026.
+    </footer>
+
+  </body>
+</html>
