@@ -22,7 +22,7 @@ layout: base.njk
       {% for outcome in outcomes %}
       <li class="flex gap-4 items-start">
         <span class="mt-2.5 shrink-0 w-2.5 h-2.5 rounded-full bg-yellow border-2 border-black"></span>
-        <p class="font-inter text-lg leading-relaxed">{{ outcome }}</p>
+        <p class="font-inter text-lg leading-relaxed">{{ outcome | md | safe }}</p>
       </li>
       {% endfor %}
     </ul>
@@ -53,7 +53,7 @@ layout: base.njk
       {% for learning in learnings %}
       <li class="flex gap-4 items-start">
         <span class="mt-2.5 shrink-0 w-2.5 h-2.5 rounded-full bg-yellow border-2 border-black"></span>
-        <p class="font-inter text-lg leading-relaxed text-muted">{{ learning }}</p>
+        <p class="font-inter text-lg leading-relaxed text-muted">{{ learning | md | safe }}</p>
       </li>
       {% endfor %}
     </ul>
