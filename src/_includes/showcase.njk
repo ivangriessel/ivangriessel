@@ -5,7 +5,7 @@ layout: base.njk
 <article class="max-w-4xl mx-auto px-5 md:px-10">
 
   {# ── Page header ─────────────────────────────────────────────────── #}
-  <header class="py-16 border-b border-black/10">
+  <header class="py-16">
     <a href="/#work" class="inline-flex items-center gap-2 font-inter text-sm font-medium text-muted hover:text-black transition-colors mb-8">
       ← Back to work
     </a>
@@ -16,7 +16,7 @@ layout: base.njk
 
   {# ── Outcomes ────────────────────────────────────────────────────── #}
   {% if outcomes %}
-  <section class="py-14 border-b border-black/10">
+  <section class="py-14">
     <h2 class="font-avenir font-bold text-3xl mb-8">Outcomes.</h2>
     <ul class="flex flex-col gap-4 max-w-2xl">
       {% for outcome in outcomes %}
@@ -31,14 +31,14 @@ layout: base.njk
 
   {# ── Problem ─────────────────────────────────────────────────────── #}
   {% if problem %}
-  <section class="py-14 border-b border-black/10">
+  <section class="py-14">
     <h2 class="font-avenir font-bold text-3xl mb-6">Problem.</h2>
     <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">{{ problem }}</p>
   </section>
   {% endif %}
 
   {# ── What I did ──────────────────────────────────────────────────── #}
-  <section class="py-14 border-b border-black/10">
+  <section class="py-14">
     <h2 class="font-avenir font-bold text-3xl mb-10">What I did.</h2>
     <div class="flex flex-col gap-16">
       {{ content | safe }}
