@@ -3,6 +3,175 @@ layout: base.njk
 title: Ivan Griessel
 ---
 
-<div class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28 py-16">
-  <p class="font-avenir font-bold text-4xl">Coming soon.</p>
-</div>
+{# ── Hero ─────────────────────────────────────────────────────────── #}
+<section class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28 pt-16 pb-24 lg:pb-32">
+  <div class="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-12 lg:gap-8">
+
+    {# Left: copy #}
+    <div class="flex flex-col gap-8 lg:max-w-[560px]">
+      <div class="flex flex-col gap-4">
+        <p class="font-inter font-semibold text-lg">Hi, my name is Ivan.</p>
+        <h1 class="font-avenir font-bold text-5xl md:text-6xl leading-tight">
+          Product Designer.<br />Illustrator.
+        </h1>
+      </div>
+
+      <p class="font-inter font-medium text-lg text-muted leading-relaxed">
+        8+ years in HealthTech. Currently Product and Design Lead at Healios,
+        designing clinical tooling in the ADHD, ASD and Mental Health space
+        for children and young people.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a
+          href="https://www.linkedin.com/in/ivangriessel/"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center justify-center px-5 py-3 bg-yellow border-2 border-black rounded-xl shadow-brutal font-inter font-semibold text-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
+        >
+          LinkedIn →
+        </a>
+        <a
+          href="mailto:ivangriessel@gmail.com"
+          class="inline-flex items-center justify-center px-5 py-3 border-2 border-black rounded-xl shadow-brutal font-inter font-semibold text-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
+        >
+          ivangriessel@gmail.com →
+        </a>
+      </div>
+    </div>
+
+    {# Right: profile photo #}
+    <div class="flex justify-center lg:justify-end shrink-0">
+      <div class="w-64 h-64 md:w-80 md:h-80 lg:w-[340px] lg:h-[340px] rounded-[48px] lg:rounded-[67px] border-4 border-black shadow-brutal overflow-hidden">
+        <img
+          src="/assets/images/ivan-profile.jpg"
+          alt="Ivan Griessel"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{# ── Work ─────────────────────────────────────────────────────────── #}
+<section id="work" class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28 py-16 border-t border-black/10">
+  <h2 class="font-avenir font-bold text-5xl md:text-6xl mb-14">Work.</h2>
+
+  <div class="flex flex-col gap-14">
+
+    {# Showcase 1 – Healios Admin #}
+    <div class="flex flex-col lg:flex-row gap-8 lg:items-start">
+      <div class="shrink-0 w-full lg:w-[520px] h-72 md:h-96 lg:h-[380px] bg-white border-4 border-black rounded-3xl overflow-hidden">
+        <img
+          src="/assets/images/showcase-healios.jpg"
+          alt="Healios clinical admin interface"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="flex flex-col gap-5 lg:pt-2">
+        <h3 class="font-avenir font-bold text-2xl leading-snug">
+          50% increase in clinical capacity by reducing admin time.
+        </h3>
+        <p class="font-inter text-lg text-muted leading-relaxed">
+          Healios wanted to increase clinical sessions per clinician per week
+          from 4 to 6, but were unable to do this due to inefficient clinical
+          admin tasks slowing things down.
+        </p>
+        <a
+          href="/work/healios-admin/"
+          class="self-start inline-flex items-center justify-center px-5 py-3 border-2 border-black rounded-xl shadow-brutal font-inter font-semibold text-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
+        >
+          Read the showcase
+        </a>
+      </div>
+    </div>
+
+    {# Showcase 2 – Biomarker #}
+    <div class="flex flex-col lg:flex-row gap-8 lg:items-start">
+      <div class="shrink-0 w-full lg:w-[520px] h-72 md:h-96 lg:h-[380px] border-4 border-black rounded-3xl overflow-hidden">
+        <img
+          src="/assets/images/showcase-biomarker.jpg"
+          alt="Biomarker research UI concepts"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="flex flex-col gap-5 lg:pt-2">
+        <h3 class="font-avenir font-bold text-2xl leading-snug">
+          Translating biomarker research into clinical UI concepts.
+        </h3>
+        <p class="font-inter text-lg text-muted leading-relaxed">
+          Neurodevelopmental assessments are expensive and take a long time.
+          Early stage research into biomarkers provides hope that understanding
+          these markers could make full assessment redundant. Testing this
+          research at Healios was a unique opportunity.
+        </p>
+        <a
+          href="/work/biomarker/"
+          class="self-start inline-flex items-center justify-center px-5 py-3 border-2 border-black rounded-xl shadow-brutal font-inter font-semibold text-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
+        >
+          Read the showcase
+        </a>
+      </div>
+    </div>
+
+    {# Showcase 3 – ZAVA #}
+    <div class="flex flex-col lg:flex-row gap-8 lg:items-start">
+      <div class="shrink-0 w-full lg:w-[520px] h-72 md:h-96 lg:h-[380px] border-4 border-black rounded-3xl overflow-hidden">
+        <img
+          src="/assets/images/showcase-zava.jpg"
+          alt="ZAVA app"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="flex flex-col gap-5 lg:pt-2">
+        <h3 class="font-avenir font-bold text-2xl leading-snug">
+          Grow the ZAVA app addressable market from 10% to 95% of the German market.
+        </h3>
+        <p class="font-inter text-lg text-muted leading-relaxed">
+          ZAVA needed to expand the booking flow for their GP video consultation
+          app in Germany. Enabling statutory health insured (SHI) bookings would
+          increase the addressable market by ~85%, but added considerable
+          complexity to the flow.
+        </p>
+        <a
+          href="/work/zava/"
+          class="self-start inline-flex items-center justify-center px-5 py-3 border-2 border-black rounded-xl shadow-brutal font-inter font-semibold text-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
+        >
+          Read the showcase
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{# ── About ────────────────────────────────────────────────────────── #}
+<section id="about" class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28 py-16 border-t border-black/10">
+  <div class="max-w-[600px]">
+    <h2 class="font-avenir font-bold text-5xl md:text-6xl mb-12">About.</h2>
+    <div class="flex flex-col gap-5 font-inter text-lg leading-relaxed">
+      <p>
+        I'm a lead level product designer with a system thinking approach to my
+        work. I have a strong bias for action and prefer rapid iteration based
+        on data.
+      </p>
+      <p>
+        I have a talent for building deep knowledge of my users and product area
+        quickly, boosting my ability to problem solve for them.
+      </p>
+      <p>
+        I like getting my hands dirty, working closely with software engineers
+        and contributing code where I can. Working in this way helps me make the
+        required trade-offs between user needs and tech limitations fast and
+        effectively.
+      </p>
+      <p>I keep on top of the latest in AI to help me boost my productivity where I can.</p>
+      <p>Direct communication and kindness are important to me.</p>
+      <p>
+        I'm originally from sunny South Africa, but currently live in Norwich,
+        UK, with my wife and two daughters.
+      </p>
+    </div>
+  </div>
+</section>
