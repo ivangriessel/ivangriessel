@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grow the ZAVA app addressable market from 10% to 95% of the German market. | Product Designer</title>
+    <meta name="description" content="Expanding ZAVA&#39;s German GP booking flow to support statutory health insured patients while maintaining conversion and clarity." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              avenir: ['"Avenir Next"', 'system-ui', 'sans-serif'],
+              inter: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              cream: '#f8f4f1',
+              muted: '#555555',
+              yellow: '#fdc111',
+            },
+            boxShadow: {
+              brutal: '4px 4px 0 0 #000',
+            },
+          },
+        },
+      }
+    </script>
+
+    <style>
+      @font-face {
+        font-family: 'Avenir Next';
+        src: url('/assets/fonts/AvenirNext-Bold.woff2') format('woff2'),
+             url('/assets/fonts/AvenirNext-Bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Avenir Next';
+        src: url('/assets/fonts/AvenirNext-DemiBold.woff2') format('woff2'),
+             url('/assets/fonts/AvenirNext-DemiBold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Avenir Next';
+        src: url('/assets/fonts/AvenirNext-Regular.woff2') format('woff2'),
+             url('/assets/fonts/AvenirNext-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+  </head>
+
+  <body class="bg-cream text-black font-inter antialiased">
+
+    <nav class="bg-cream border-b border-black/10 sticky top-0 z-50">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28 py-4 flex justify-between items-center">
+        <a href="/" class="font-avenir font-bold text-lg hover:opacity-70 transition-opacity">Ivan Griessel.</a>
+        <div class="flex gap-8 items-center font-avenir font-bold text-lg">
+          <a href="/#work" class="hover:opacity-70 transition-opacity">Work.</a>
+          <a href="/#about" class="hover:opacity-70 transition-opacity">About.</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      
+<article class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28">
+
+  
+  <header class="py-16 border-b border-black/10">
+    <a href="/#work" class="inline-flex items-center gap-2 font-inter text-sm font-medium text-muted hover:text-black transition-colors mb-8">
+      ← Back to work
+    </a>
+    <h1 class="font-avenir font-bold text-4xl md:text-5xl lg:text-6xl leading-tight max-w-4xl">
+      Grow the ZAVA app addressable market from 10% to 95% of the German market.
+    </h1>
+  </header>
+
+  
+  
+  <section class="py-14 border-b border-black/10">
+    <h2 class="font-avenir font-bold text-3xl mb-8">Outcomes.</h2>
+    <ul class="flex flex-col gap-4 max-w-2xl">
+      
+      <li class="flex gap-4 items-start">
+        <span class="mt-1.5 shrink-0 w-2.5 h-2.5 rounded-full bg-yellow border-2 border-black"></span>
+        <p class="font-inter text-lg leading-relaxed">Opened ~85% of the German GP market by enabling statutory health insurance (SHI) bookings in the app.</p>
+      </li>
+      
+      <li class="flex gap-4 items-start">
+        <span class="mt-1.5 shrink-0 w-2.5 h-2.5 rounded-full bg-yellow border-2 border-black"></span>
+        <p class="font-inter text-lg leading-relaxed">Maintained ~75% registration conversion despite a significantly longer, more complex flow.</p>
+      </li>
+      
+      <li class="flex gap-4 items-start">
+        <span class="mt-1.5 shrink-0 w-2.5 h-2.5 rounded-full bg-yellow border-2 border-black"></span>
+        <p class="font-inter text-lg leading-relaxed">Post-release support contact rate stayed below 2.5%, indicating the flow was clear enough to navigate without help.</p>
+      </li>
+      
+    </ul>
+  </section>
+  
+
+  
+  
+  <section class="py-14 border-b border-black/10">
+    <h2 class="font-avenir font-bold text-3xl mb-6">Problem.</h2>
+    <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">ZAVA needed to expand the booking flow for their GP video consultation app in Germany. Expanding the flow to allow bookings with statutory health insured (SHI) GPs would increase the addressable market by ~85%, but would add considerable complexity to the flow.</p>
+  </section>
+  
+
+  
+  <section class="py-14 border-b border-black/10">
+    <h2 class="font-avenir font-bold text-3xl mb-10">What I did.</h2>
+    <div class="flex flex-col gap-16">
+      
+
+<div class="flex flex-col gap-6">
+  <h3 class="font-avenir font-bold text-2xl">Solving information density.</h3>
+  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+    Information density posed a big problem with this flow. There was more information
+    to parse and more decisions to be made. I solved this with a combination of micro
+    interactions, filters and progressive disclosure — allowing patients to dig deeper
+    into GP details and available times if they wanted to, or fly through the flow by
+    selecting the next available GP and slot.
+  </p>
+</div>
+
+<div class="flex flex-col gap-6">
+  <h3 class="font-avenir font-bold text-2xl">Navigating complex legislation.</h3>
+  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+    The legislation on this kind of app for SHI GPs was incredibly complex at the
+    time. To make sure the flow would work in that environment I ran a series of
+    workshops with stakeholders from Clinical, Commercial, Legal and Engineering —
+    matching user needs against legal and technical limitations to meet our strategic
+    goals.
+  </p>
+</div>
+
+<div class="flex flex-col gap-6">
+  <h3 class="font-avenir font-bold text-2xl">User testing under constraints.</h3>
+  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+    User testing was disrupted by COVID-19 and a problem with our usertesting.com
+    account. I recruited 9 colleagues and 4 of their contacts to keep the project
+    moving. It didn't give me the depth of validation I was after, but it surfaced
+    real usability and comprehension issues — particularly valuable as an
+    English-speaking designer working on a German-language app.
+  </p>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section class="py-14">
+    <h2 class="font-avenir font-bold text-3xl mb-8">Learnings.</h2>
+    <ul class="flex flex-col gap-4 max-w-2xl">
+      
+      <li class="flex gap-4 items-start">
+        <span class="mt-1.5 shrink-0 w-2.5 h-2.5 rounded-full border-2 border-black"></span>
+        <p class="font-inter text-lg leading-relaxed text-muted">I still found facilitating workshops with senior stakeholders challenging at this stage. Since then I&#39;ve been doing more focused group workshops when I need stakeholders to collaborate, and 1-1 expert interviews prior to workshops to save time and focus group discussion.</p>
+      </li>
+      
+    </ul>
+  </section>
+  
+
+</article>
+
+    </main>
+
+    <footer class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28 py-10 text-black/40 text-sm font-inter">
+      © Ivan Griessel. 2026.
+    </footer>
+
+  </body>
+</html>
