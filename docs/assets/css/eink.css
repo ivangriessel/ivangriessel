@@ -1,0 +1,507 @@
+/* ================================================
+   E-INK DESIGN SYSTEM
+   Major Mono Display (titles) + JetBrains Mono (body)
+   Paper: #ece9e0 | Ink: #1a1a1a
+   ================================================ */
+
+:root {
+  --paper:   #ece9e0;
+  --paper-2: #e3dfd3;
+  --paper-3: #d8d3c4;
+  --ink:     #1a1a1a;
+}
+
+* { box-sizing: border-box; }
+
+/* ── FULL-VIEWPORT BACKGROUND ─────────────────── */
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--paper);
+  background-image: radial-gradient(rgba(26,26,26,0.05) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+/* ── HOMEPAGE CONTENT WRAPPER ─────────────────── */
+/* Constrains the homepage sections to max-width + side padding */
+.ei-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px 56px 0;
+}
+@media (max-width: 768px) {
+  .ei-page { padding: 20px 18px 0; font-size: 13px; }
+}
+
+/* ── TYPOGRAPHY ───────────────────────────────── */
+.ei-display {
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: -0.02em;
+}
+.ei-mono { font-family: 'JetBrains Mono', monospace; }
+.ei-mono--xs {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ── RULE ─────────────────────────────────────── */
+.ei-rule {
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.9;
+}
+
+/* ── GLOBAL NAV (full-width, used in base.njk) ── */
+.ei-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 56px 14px;
+  border-bottom: 1px solid var(--ink);
+}
+@media (max-width: 768px) {
+  .ei-nav {
+    padding: 10px 18px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+.ei-nav__brand { display: flex; align-items: center; gap: 10px; }
+.ei-nav__mark {
+  display: inline-block;
+  width: 14px; height: 14px;
+  background:
+    radial-gradient(var(--ink) 1px, transparent 1px) 0 0 / 4px 4px,
+    var(--paper);
+  border: 1px solid var(--ink);
+  flex-shrink: 0;
+}
+.ei-nav__name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+}
+.ei-nav__name:hover { text-decoration: underline; }
+.ei-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .ei-nav__links { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+.ei-nav__links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) { .ei-nav__links a { font-size: 10px; } }
+.ei-nav__links a:hover { text-decoration: underline; }
+
+/* ── BUTTONS ──────────────────────────────────── */
+.ei-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 10px 16px;
+  background: var(--paper);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.ei-btn:hover { background: var(--ink); color: var(--paper); }
+.ei-btn--primary { background: var(--ink); color: var(--paper); }
+.ei-btn--primary:hover { background: var(--paper); color: var(--ink); }
+.ei-btn__arrow {
+  font-size: 14px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── HERO ─────────────────────────────────────── */
+.ei-hero { padding: 24px 0 32px; }
+.ei-hero__top { display: flex; justify-content: space-between; }
+.ei-hero__body {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .ei-hero__body { grid-template-columns: 1fr; gap: 32px; }
+}
+.ei-hero__title {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 84px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: -0.02em;
+  margin: 0 0 28px;
+  display: grid;
+  gap: 4px;
+}
+@media (max-width: 768px) {
+  .ei-hero__title { font-size: 32px; line-height: 1.05; word-break: break-word; }
+}
+.ei-hero__bio {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0 0 28px;
+  text-wrap: pretty;
+}
+.ei-hero__cta { display: flex; gap: 14px; flex-wrap: wrap; }
+.ei-hero__aside {
+  display: grid;
+  gap: 24px;
+  justify-items: end;
+}
+@media (max-width: 768px) { .ei-hero__aside { justify-items: stretch; } }
+.ei-hero__portrait {
+  border: 1px solid var(--ink);
+  padding: 12px;
+  background: var(--paper);
+  position: relative;
+}
+@media (max-width: 768px) { .ei-hero__portrait { width: 100%; } }
+.ei-hero__photo {
+  display: block;
+  mix-blend-mode: multiply;
+  image-rendering: pixelated;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+@media (max-width: 768px) { .ei-hero__photo { width: 100%; height: auto; } }
+.ei-hero__portrait-cap {
+  border-top: 1px solid var(--ink);
+  margin-top: 10px;
+  padding-top: 8px;
+  text-align: center;
+}
+.ei-hero__stats {
+  display: grid;
+  gap: 8px;
+  width: 320px;
+  max-width: 100%;
+}
+
+/* ── META ROW ─────────────────────────────────── */
+.ei-meta-row {
+  display: grid;
+  grid-template-columns: 150px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.ei-meta-dot { border-bottom: 1px dotted var(--ink); height: 8px; }
+
+/* ── SECTION ──────────────────────────────────── */
+.ei-section { padding: 32px 0; }
+@media (max-width: 768px) { .ei-section { padding: 28px 0; } }
+
+/* ── SECTION HEADER ───────────────────────────── */
+.ei-sechead__top { display: flex; justify-content: space-between; }
+.ei-sechead__title {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 84px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .ei-sechead__title { font-size: 32px; line-height: 1.05; word-break: break-word; }
+}
+.ei-stack { display: grid; gap: 32px; margin-top: 24px; }
+@media (max-width: 768px) { .ei-stack { gap: 28px; } }
+
+/* ── CARD BASE ────────────────────────────────── */
+.ei-work, .ei-rec {
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 28px 32px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .ei-work, .ei-rec { padding: 20px 18px; }
+}
+.ei-work::before, .ei-rec::before,
+.ei-work::after,  .ei-rec::after {
+  content: '';
+  position: absolute;
+  width: 10px; height: 10px;
+  border: 0 solid var(--ink);
+  pointer-events: none;
+}
+.ei-work::before, .ei-rec::before {
+  top: 5px; left: 5px;
+  border-top-width: 1px; border-left-width: 1px;
+}
+.ei-work::after, .ei-rec::after {
+  bottom: 5px; right: 5px;
+  border-bottom-width: 1px; border-right-width: 1px;
+}
+.ei-card-corner-tr {
+  position: absolute; top: 5px; right: 5px;
+  width: 10px; height: 10px;
+  border-top: 1px solid var(--ink);
+  border-right: 1px solid var(--ink);
+  pointer-events: none;
+}
+.ei-card-corner-bl {
+  position: absolute; bottom: 5px; left: 5px;
+  width: 10px; height: 10px;
+  border-bottom: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+  pointer-events: none;
+}
+
+/* ── CARD HEAD ────────────────────────────────── */
+.ei-work__head, .ei-rec__head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 28px;
+}
+@media (max-width: 768px) {
+  .ei-work__head, .ei-rec__head { grid-template-columns: auto 1fr; gap: 16px; }
+}
+.ei-work__num, .ei-rec__num {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  border-right: 1px solid var(--ink);
+}
+@media (max-width: 768px) {
+  .ei-work__num, .ei-rec__num { padding-right: 14px; }
+}
+.ei-work__org, .ei-rec__name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  font-weight: 400;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .ei-work__org, .ei-rec__name { font-size: 18px; }
+}
+.ei-work__year { font-weight: 400; }
+.ei-work__role, .ei-rec__role { margin-top: 4px; }
+.ei-work__cta { justify-self: end; }
+@media (max-width: 768px) { .ei-work__cta { display: none; } }
+
+.ei-rec__date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: right;
+  display: grid;
+  gap: 4px;
+}
+@media (max-width: 768px) { .ei-rec__date { display: none; } }
+
+/* ── WORK BODY ────────────────────────────────── */
+.ei-work__body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 36px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .ei-work__body { grid-template-columns: 1fr; gap: 18px; }
+}
+.ei-work__visual {
+  background: var(--paper-2);
+  border: 1px solid var(--ink);
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  max-width: 100%;
+  align-self: start;
+}
+@media (max-width: 768px) { .ei-work__visual { width: 100%; } }
+.ei-work__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ei-work__title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+@media (max-width: 768px) { .ei-work__title { font-size: 24px; } }
+.ei-work__blurb {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 0 0 16px;
+  text-wrap: pretty;
+}
+.ei-tags {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  gap: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+}
+
+/* ── REC CARD BODY ────────────────────────────── */
+.ei-rec__body {
+  display: grid;
+  grid-template-columns: 168px 1fr 220px;
+  gap: 36px;
+}
+@media (max-width: 768px) { .ei-rec__body { grid-template-columns: 1fr; gap: 22px; } }
+.ei-rec__portrait { display: grid; gap: 10px; justify-items: start; }
+.ei-rec__initials {
+  width: 132px; height: 132px;
+  border: 1px solid var(--ink);
+  background: var(--paper-2);
+  background-image: radial-gradient(rgba(26,26,26,0.18) 1px, transparent 1px);
+  background-size: 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 56px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+@media (max-width: 768px) { .ei-rec__initials { width: 92px; height: 92px; font-size: 38px; } }
+.ei-rec__quote-col { position: relative; }
+.ei-rec__quote {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  line-height: 1.34;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+  max-width: 768px;
+  text-wrap: pretty;
+}
+@media (max-width: 768px) { .ei-rec__quote { font-size: 18px; } }
+.ei-rec__bodytext {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 768px;
+  text-wrap: pretty;
+}
+.ei-rec__side { display: grid; gap: 18px; align-content: start; }
+
+/* ── SIDE BLOCKS ──────────────────────────────── */
+.ei-side-block { border-top: 1px solid var(--ink); padding-top: 10px; }
+.ei-side-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.ei-side-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ── RECS FOOTER ROW ──────────────────────────── */
+.ei-recs__more { margin-top: 32px; }
+.ei-recs__more-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  gap: 16px;
+}
+
+/* ── ABOUT ────────────────────────────────────── */
+.ei-about {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 36px;
+  margin-top: 36px;
+}
+@media (max-width: 768px) {
+  .ei-about { grid-template-columns: 1fr; gap: 24px; margin-top: 24px; }
+}
+.ei-about__col { display: grid; gap: 18px; align-content: start; max-width: 768px; }
+.ei-about__p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+  text-wrap: pretty;
+}
+.ei-about__side { display: grid; gap: 16px; align-content: start; }
+
+/* ── GLOBAL FOOTER (full-width, used in base.njk) */
+.ei-footer {
+  padding: 40px 56px 32px;
+}
+@media (max-width: 768px) {
+  .ei-footer { padding: 40px 18px 32px; }
+}
+.ei-footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+}
+@media (max-width: 768px) {
+  .ei-footer__row { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+
+/* ── SHOWCASE PAGE TYPOGRAPHY REMAP ───────────── */
+/* Allows showcase pages to use Tailwind's font-avenir / font-inter
+   class names while rendering with the e-ink font stack.           */
+.font-avenir {
+  font-family: 'Major Mono Display', monospace !important;
+  font-weight: 400 !important;
+  font-synthesis: none;
+  text-transform: lowercase;
+  letter-spacing: -0.02em;
+}
+.font-inter {
+  font-family: 'JetBrains Mono', monospace !important;
+}
