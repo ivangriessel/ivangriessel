@@ -69,9 +69,9 @@ body {
 /* the 1440px page content edges, matching the design */
 .ei-nav { }
 .ei-nav__inner {
-  max-width: 1440px;
+  max-width: 1328px;
   margin: 0 auto;
-  padding: 10px 56px 14px;
+  padding: 10px 0 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
