@@ -1,92 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ivan Griessel | Product Designer</title>
-    <meta name="description" content="Designing gamified data-collection modules to test neurodiversity biomarker research with children at Healios." />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Translating biomarker research into clinical UI concepts.</title>
+  <meta name="description" content="Designing gamified data-collection modules to test neurodiversity biomarker research with children at Healios." />
 
-    <link rel="icon" href="/assets/images/favicon.ico" sizes="32x32" />
-    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              avenir: ['"Avenir Next"', 'system-ui', 'sans-serif'],
-              inter: ['Inter', 'system-ui', 'sans-serif'],
-            },
-            colors: {
-              cream: '#f8f4f1',
-              muted: '#555555',
-              yellow: '#fdc111',
-            },
-            boxShadow: {
-              brutal: '4px 4px 0 0 #000',
-            },
+  <link rel="stylesheet" href="/assets/css/eink.css" />
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            avenir: ['"Major Mono Display"', 'monospace'],
+            inter:  ['"JetBrains Mono"', '"IBM Plex Mono"', 'monospace'],
+          },
+          colors: {
+            cream:  '#ece9e0',
+            muted:  '#1a1a1a',
+            yellow: '#fdc111',
+          },
+          boxShadow: {
+            brutal: '4px 4px 0 0 #1a1a1a',
           },
         },
-      }
-    </script>
+      },
+    }
+  </script>
+</head>
+<body>
 
-    <style>
-      html { scroll-behavior: smooth; }
-      @font-face {
-        font-family: 'Avenir Next';
-        src: url('/assets/fonts/AvenirNext-Bold.woff2') format('woff2'),
-             url('/assets/fonts/AvenirNext-Bold.woff') format('woff');
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'Avenir Next';
-        src: url('/assets/fonts/AvenirNext-DemiBold.woff2') format('woff2'),
-             url('/assets/fonts/AvenirNext-DemiBold.woff') format('woff');
-        font-weight: 600;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'Avenir Next';
-        src: url('/assets/fonts/AvenirNext-Regular.woff2') format('woff2'),
-             url('/assets/fonts/AvenirNext-Regular.woff') format('woff');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
-    </style>
-  </head>
-
-  <body class="bg-cream text-black font-inter antialiased">
-
-    <nav>
-      <div class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28 py-4 flex justify-between items-center">
-        <a href="/" class="font-avenir font-bold text-lg hover:opacity-70 transition-opacity">Ivan Griessel.</a>
-        <div class="flex gap-8 items-center font-avenir font-bold text-lg">
-          <a href="/#work" class="relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-black hover:after:w-full after:transition-all after:duration-200">Work.</a>
-          <a href="/#about" class="relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-black hover:after:w-full after:transition-all after:duration-200">About.</a>
-        </div>
+  <nav class="ei-nav">
+    <div class="ei-nav__inner">
+      <div class="ei-nav__brand">
+        <span class="ei-nav__mark"></span>
+        <a href="/" class="ei-nav__name">IVAN GRIESSEL <span style="opacity:0.7">— PRODUCT / DESIGN</span></a>
       </div>
-    </nav>
+      <div class="ei-nav__links">
+        <a href="/#work">/WORK</a>
+        <a href="/#recommendations">/RECOMMENDATIONS</a>
+        <a href="/#about">/ABOUT</a>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-      
+  <main>
+    
 <article class="max-w-4xl mx-auto px-5 md:px-10">
 
   
   <header class="py-16">
-    <a href="/#work" class="inline-flex items-center gap-2 font-inter text-sm font-medium text-muted hover:text-black transition-colors mb-8">
+    <a href="/#work" class="inline-flex items-center gap-2 font-inter text-sm font-medium mb-8" style="display:block; text-decoration:none; color:var(--ink);">
       ← Back to work
     </a>
-    <h1 class="font-avenir font-bold text-4xl md:text-5xl lg:text-6xl leading-tight max-w-4xl">
+    <h1 class="font-avenir text-4xl md:text-5xl lg:text-6xl leading-tight max-w-4xl">
       Translating biomarker research into clinical UI concepts.
     </h1>
   </header>
@@ -94,17 +72,17 @@
   
   
   <section class="py-14">
-    <h2 class="font-avenir font-bold text-3xl mb-8">Outcomes.</h2>
+    <h2 class="font-avenir text-3xl mb-8">Outcomes.</h2>
     <ul class="flex flex-col gap-4 max-w-2xl">
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2.5 h-2.5 rounded-full bg-yellow border-2 border-black"></span>
-        <p class="font-inter text-lg leading-relaxed">Designed two modules for the Veris app that could be tested with young people to collect data and verify the research.</p>
+        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="font-inter text-base leading-relaxed">Designed two modules for the Veris app that could be tested with young people to collect data and verify the research.</p>
       </li>
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2.5 h-2.5 rounded-full bg-yellow border-2 border-black"></span>
-        <p class="font-inter text-lg leading-relaxed">Children aged 5–8 were engaged enough in the activities to collect valid data.</p>
+        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="font-inter text-base leading-relaxed">Children aged 5–8 were engaged enough in the activities to collect valid data.</p>
       </li>
       
     </ul>
@@ -114,14 +92,14 @@
   
   
   <section class="py-14">
-    <h2 class="font-avenir font-bold text-3xl mb-6">Problem.</h2>
-    <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">Neurodevelopmental assessments are expensive and take a long time. Early stage research into biomarkers provides hope that understanding these markers could make full assessment redundant. Testing this research at Healios was a unique opportunity.</p>
+    <h2 class="font-avenir text-3xl mb-6">Problem.</h2>
+    <p class="font-inter text-base leading-relaxed max-w-2xl">Neurodevelopmental assessments are expensive and take a long time. Early stage research into biomarkers provides hope that understanding these markers could make full assessment redundant. Testing this research at Healios was a unique opportunity.</p>
   </section>
   
 
   
   <section class="py-14">
-    <h2 class="font-avenir font-bold text-3xl mb-10">What I did.</h2>
+    <h2 class="font-avenir text-3xl mb-10">What I did.</h2>
     <div class="flex flex-col gap-16">
       
 
@@ -191,11 +169,19 @@
 
 </article>
 
-    </main>
+  </main>
 
-    <footer class="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-28 py-10 text-black/40 text-sm font-inter">
-      © Ivan Griessel. 2026.
-    </footer>
+  <footer class="ei-footer">
+    <div class="ei-footer__inner">
+      <div class="ei-rule"></div>
+      <div class="ei-footer__row">
+        <span class="ei-mono ei-mono--xs">© Ivan Griessel · 2026</span>
+        <span class="ei-mono ei-mono--xs">Set in dot-matrix. Printed on e-paper.</span>
+        <span class="ei-mono ei-mono--xs">END OF FILE</span>
+      </div>
+    </div>
+  </footer>
 
-  </body>
+  <script src="/assets/js/halftone.js"></script>
+</body>
 </html>
