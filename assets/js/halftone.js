@@ -64,6 +64,33 @@
     return '<svg width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '" style="display:block">' + circles + '</svg>';
   }
 
+  function workPlaceholder(label) {
+    var circles = '';
+    for (var row = 0; row < 28; row++) {
+      for (var col = 0; col < 40; col++) {
+        var cx = col * 8 + 4;
+        var cy = row * 8 + 4;
+        var dx = (cx - 160) / 160;
+        var dy = (cy - 120) / 120;
+        var d = Math.sqrt(dx * dx + dy * dy);
+        var r = Math.max(0.3, 1.8 - d * 1.3);
+        circles += '<circle cx="' + cx + '" cy="' + cy + '" r="' + r.toFixed(2) + '" fill="#1a1a1a" opacity="0.55"/>';
+      }
+    }
+    return '<div class="ei-ph">' +
+      '<span class="ei-ph__corner ei-ph__corner--tl"></span>' +
+      '<span class="ei-ph__corner ei-ph__corner--tr"></span>' +
+      '<span class="ei-ph__corner ei-ph__corner--bl"></span>' +
+      '<span class="ei-ph__corner ei-ph__corner--br"></span>' +
+      '<div class="ei-ph__inner">' +
+        '<svg viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet" width="100%" height="100%">' +
+          circles +
+        '</svg>' +
+        '<span class="ei-ph__label">' + label + '</span>' +
+      '</div>' +
+    '</div>';
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     var isMobile = window.innerWidth < 768;
     var scale = isMobile ? 5 : 7;
@@ -71,6 +98,10 @@
     document.querySelectorAll('[data-halftone]').forEach(function (el) {
       var value = el.getAttribute('data-halftone');
       el.innerHTML = halftoneText(value, scale);
+    });
+
+    document.querySelectorAll('[data-work-placeholder]').forEach(function (el) {
+      el.innerHTML = workPlaceholder(el.getAttribute('data-work-placeholder'));
     });
 
     var gridEl = document.querySelector('[data-contribution-grid]');
