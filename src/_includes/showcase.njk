@@ -6,10 +6,10 @@ layout: base.njk
 
   {# ── Page header ─────────────────────────────────────────────────── #}
   <header class="py-16">
-    <a href="/#work" class="inline-flex items-center gap-2 font-inter text-sm font-medium mb-8" style="display:block; text-decoration:none; color:var(--ink);">
+    <a href="/#work" class="inline-flex items-center gap-2 text-sm font-medium mb-8" style="display:block; text-decoration:none; color:var(--ink);">
       ← Back to work
     </a>
-    <h1 class="font-avenir text-4xl md:text-5xl lg:text-6xl leading-tight max-w-4xl">
+    <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-normal lowercase tracking-[-0.02em] leading-tight max-w-4xl">
       {{ title }}
     </h1>
   </header>
@@ -17,12 +17,12 @@ layout: base.njk
   {# ── Outcomes ────────────────────────────────────────────────────── #}
   {% if outcomes %}
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-8">Outcomes.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-8">Outcomes.</h2>
     <ul class="flex flex-col gap-4 max-w-2xl">
       {% for outcome in outcomes %}
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed">{{ outcome | md | safe }}</p>
+        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="text-base leading-relaxed">{{ outcome | md | safe }}</p>
       </li>
       {% endfor %}
     </ul>
@@ -32,14 +32,14 @@ layout: base.njk
   {# ── Problem ─────────────────────────────────────────────────────── #}
   {% if problem %}
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-6">Problem.</h2>
-    <p class="font-inter text-base leading-relaxed max-w-2xl">{{ problem }}</p>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-6">Problem.</h2>
+    <p class="text-base leading-relaxed max-w-2xl">{{ problem }}</p>
   </section>
   {% endif %}
 
   {# ── What I did ──────────────────────────────────────────────────── #}
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-10">What I did.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-10">What I did.</h2>
     <div class="flex flex-col gap-16">
       {{ content | safe }}
     </div>
@@ -48,12 +48,12 @@ layout: base.njk
   {# ── Learnings ───────────────────────────────────────────────────── #}
   {% if learnings %}
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-8">Learnings.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-8">Learnings.</h2>
     <ul class="flex flex-col gap-4 max-w-2xl">
       {% for learning in learnings %}
       <li class="flex gap-4 items-start">
         <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed">{{ learning | md | safe }}</p>
+        <p class="text-base leading-relaxed">{{ learning | md | safe }}</p>
       </li>
       {% endfor %}
     </ul>

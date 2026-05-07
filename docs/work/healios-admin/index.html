@@ -16,28 +16,18 @@
 
   <link rel="stylesheet" href="/assets/css/eink.css" />
 
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            avenir: ['"Major Mono Display"', 'monospace'],
-            inter:  ['"JetBrains Mono"', '"IBM Plex Mono"', 'monospace'],
-          },
-          colors: {
-            cream:  '#ece9e0',
-            muted:  '#1a1a1a',
-            yellow: '#fdc111',
-          },
-          boxShadow: {
-            brutal: '4px 4px 0 0 #1a1a1a',
-          },
-        },
-      },
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-display: "Major Mono Display", monospace;
+      --font-mono: "JetBrains Mono", "IBM Plex Mono", monospace;
+      --color-paper: #ece9e0;
+      --color-ink: #1a1a1a;
+      --color-muted: #1a1a1a;
+      --color-yellow: #fdc111;
+      --shadow-brutal: 4px 4px 0 0 #1a1a1a;
     }
-  </script>
+  </style>
 </head>
 <body>
 
@@ -61,10 +51,10 @@
 
   
   <header class="py-16">
-    <a href="/#work" class="inline-flex items-center gap-2 font-inter text-sm font-medium mb-8" style="display:block; text-decoration:none; color:var(--ink);">
+    <a href="/#work" class="inline-flex items-center gap-2 text-sm font-medium mb-8" style="display:block; text-decoration:none; color:var(--ink);">
       ← Back to work
     </a>
-    <h1 class="font-avenir text-4xl md:text-5xl lg:text-6xl leading-tight max-w-4xl">
+    <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-normal lowercase tracking-[-0.02em] leading-tight max-w-4xl">
       50% increase in clinical capacity by reducing admin time.
     </h1>
   </header>
@@ -72,37 +62,37 @@
   
   
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-8">Outcomes.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-8">Outcomes.</h2>
     <ul class="flex flex-col gap-4 max-w-2xl">
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed"><strong>50% increase in clinical capacity</strong> unlocked with the same number of clinicians.</p>
+        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="text-base leading-relaxed"><strong>50% increase in clinical capacity</strong> unlocked with the same number of clinicians.</p>
       </li>
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed"><strong>89% adoption</strong> rate for the report writing assistant.</p>
+        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="text-base leading-relaxed"><strong>89% adoption</strong> rate for the report writing assistant.</p>
       </li>
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed"><strong>Up to 75% reduction</strong> in report writing time across 18 service lines.</p>
+        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="text-base leading-relaxed"><strong>Up to 75% reduction</strong> in report writing time across 18 service lines.</p>
       </li>
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed">Most multi-disciplinary team meetings (MDTs) are now completed asynchronously, reducing service delivery time. Calendar conflicts were previously delaying MDTs by 2–3 weeks on average.</p>
+        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="text-base leading-relaxed">Most multi-disciplinary team meetings (MDTs) are now completed asynchronously, reducing service delivery time. Calendar conflicts were previously delaying MDTs by 2–3 weeks on average.</p>
       </li>
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed"><strong>~30 minute reduction</strong> in meeting prep time per MDT.</p>
+        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="text-base leading-relaxed"><strong>~30 minute reduction</strong> in meeting prep time per MDT.</p>
       </li>
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed">All MDT communication kept as a <strong>secure, auditable record</strong> within the clinical platform.</p>
+        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="text-base leading-relaxed">All MDT communication kept as a <strong>secure, auditable record</strong> within the clinical platform.</p>
       </li>
       
     </ul>
@@ -112,32 +102,32 @@
   
   
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-6">Problem.</h2>
-    <p class="font-inter text-base leading-relaxed max-w-2xl">Healios wanted to increase clinical sessions per clinician per week from 4 to 6, but were unable to do this due to inefficient clinical admin tasks slowing things down.</p>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-6">Problem.</h2>
+    <p class="text-base leading-relaxed max-w-2xl">Healios wanted to increase clinical sessions per clinician per week from 4 to 6, but were unable to do this due to inefficient clinical admin tasks slowing things down.</p>
   </section>
   
 
   
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-10">What I did.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-10">What I did.</h2>
     <div class="flex flex-col gap-16">
       
 
 <div class="flex flex-col gap-6">
-  <h3 class="font-avenir font-bold text-2xl">AI report writing assistant.</h3>
-  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+  <h3 class="font-display text-2xl font-normal lowercase tracking-[-0.02em]">AI report writing assistant.</h3>
+  <p class="text-lg text-muted leading-relaxed max-w-2xl">
     AI-assisted report section summaries transformed post-assessment report writing
     — one of the most time-intensive parts of a clinician's day. The tool structures
     the information-gathering process, generates clinical write-ups from
     clinician-controlled inputs, and produces consistent output with correct spelling
     and grammar baked in.
   </p>
-  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+  <p class="text-lg text-muted leading-relaxed max-w-2xl">
     It's optional, and can be managed per service if a trust or partner doesn't want
     AI used for a particular service. Service-specific prompts keep the output
     consistent, and paper notes can be added directly.
   </p>
-  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+  <p class="text-lg text-muted leading-relaxed max-w-2xl">
     I worked with our chief clinical officer, clinical safety officer and head of
     information security to make sure this tool was compliant and safe to use.
   </p>
@@ -156,13 +146,13 @@
 
 
 <div class="flex flex-col gap-6">
-  <h3 class="font-avenir font-bold text-2xl">Asynchronous multi-disciplinary team meetings.</h3>
-  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+  <h3 class="font-display text-2xl font-normal lowercase tracking-[-0.02em]">Asynchronous multi-disciplinary team meetings.</h3>
+  <p class="text-lg text-muted leading-relaxed max-w-2xl">
     I worked with our clinical head of assessments to identify ways we could make the
     MDT process asynchronous by default, removing the calendar conflict problem and
     the need to do meeting prep.
   </p>
-  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+  <p class="text-lg text-muted leading-relaxed max-w-2xl">
     In most cases clinicians agree on the majority of DSM-5 criteria and notes. Email
     or Slack is enough to resolve the remaining issues. MDT meetings are still held
     for complex cases. I designed this new flow end to end and worked closely with our
@@ -187,22 +177,22 @@
   
   
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-8">Learnings.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-8">Learnings.</h2>
     <ul class="flex flex-col gap-4 max-w-2xl">
       
       <li class="flex gap-4 items-start">
         <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed">AI regulation in clinical settings is complicated and still evolving. It also overlaps with guidance on clinical devices, making it more complex and potentially costly to get wrong — if I worked in this area again I'd have a head start, but there is much more to learn.</p>
+        <p class="text-base leading-relaxed">AI regulation in clinical settings is complicated and still evolving. It also overlaps with guidance on clinical devices, making it more complex and potentially costly to get wrong — if I worked in this area again I'd have a head start, but there is much more to learn.</p>
       </li>
       
       <li class="flex gap-4 items-start">
         <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed">Changing two core existing clinical processes required more collaboration, planning and change management outside of the product than I expected — I'd be more prepared for this in future.</p>
+        <p class="text-base leading-relaxed">Changing two core existing clinical processes required more collaboration, planning and change management outside of the product than I expected — I'd be more prepared for this in future.</p>
       </li>
       
       <li class="flex gap-4 items-start">
         <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed">Clinicians with a background in the NHS are not as used to or comfortable with change as the average user — I would allow even more time in future for adoption and discussion on risk and safety concerns to allay fears.</p>
+        <p class="text-base leading-relaxed">Clinicians with a background in the NHS are not as used to or comfortable with change as the average user — I would allow even more time in future for adoption and discussion on risk and safety concerns to allay fears.</p>
       </li>
       
     </ul>

@@ -16,28 +16,18 @@
 
   <link rel="stylesheet" href="/assets/css/eink.css" />
 
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            avenir: ['"Major Mono Display"', 'monospace'],
-            inter:  ['"JetBrains Mono"', '"IBM Plex Mono"', 'monospace'],
-          },
-          colors: {
-            cream:  '#ece9e0',
-            muted:  '#1a1a1a',
-            yellow: '#fdc111',
-          },
-          boxShadow: {
-            brutal: '4px 4px 0 0 #1a1a1a',
-          },
-        },
-      },
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-display: "Major Mono Display", monospace;
+      --font-mono: "JetBrains Mono", "IBM Plex Mono", monospace;
+      --color-paper: #ece9e0;
+      --color-ink: #1a1a1a;
+      --color-muted: #1a1a1a;
+      --color-yellow: #fdc111;
+      --shadow-brutal: 4px 4px 0 0 #1a1a1a;
     }
-  </script>
+  </style>
 </head>
 <body>
 
@@ -61,10 +51,10 @@
 
   
   <header class="py-16">
-    <a href="/#work" class="inline-flex items-center gap-2 font-inter text-sm font-medium mb-8" style="display:block; text-decoration:none; color:var(--ink);">
+    <a href="/#work" class="inline-flex items-center gap-2 text-sm font-medium mb-8" style="display:block; text-decoration:none; color:var(--ink);">
       ← Back to work
     </a>
-    <h1 class="font-avenir text-4xl md:text-5xl lg:text-6xl leading-tight max-w-4xl">
+    <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-normal lowercase tracking-[-0.02em] leading-tight max-w-4xl">
       Grow the ZAVA app addressable market from 10% to 95% of the German market.
     </h1>
   </header>
@@ -72,22 +62,22 @@
   
   
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-8">Outcomes.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-8">Outcomes.</h2>
     <ul class="flex flex-col gap-4 max-w-2xl">
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed"><strong>Opened ~85% of the German GP market</strong> by enabling SHI bookings in the app.</p>
+        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="text-base leading-relaxed"><strong>Opened ~85% of the German GP market</strong> by enabling SHI bookings in the app.</p>
       </li>
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed"><strong>Maintained ~75% registration conversion</strong> despite a significantly longer, more complex flow.</p>
+        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="text-base leading-relaxed"><strong>Maintained ~75% registration conversion</strong> despite a significantly longer, more complex flow.</p>
       </li>
       
       <li class="flex gap-4 items-start">
-        <span class="mt-2.5 shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed">Post-release <strong>support contact rate stayed below 2.5%</strong>, indicating the flow was clear enough to navigate without help.</p>
+        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <p class="text-base leading-relaxed">Post-release <strong>support contact rate stayed below 2.5%</strong>, indicating the flow was clear enough to navigate without help.</p>
       </li>
       
     </ul>
@@ -97,14 +87,14 @@
   
   
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-6">Problem.</h2>
-    <p class="font-inter text-base leading-relaxed max-w-2xl">ZAVA needed to expand the booking flow for their GP video consultation app in Germany. Expanding the flow to allow bookings with statutory health insured (SHI) GPs would increase the addressable market by ~85%, but would add considerable complexity to the flow.</p>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-6">Problem.</h2>
+    <p class="text-base leading-relaxed max-w-2xl">ZAVA needed to expand the booking flow for their GP video consultation app in Germany. Expanding the flow to allow bookings with statutory health insured (SHI) GPs would increase the addressable market by ~85%, but would add considerable complexity to the flow.</p>
   </section>
   
 
   
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-10">What I did.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-10">What I did.</h2>
     <div class="flex flex-col gap-16">
       
 <div style="padding:56.25% 0 0 0;position:relative;">
@@ -126,8 +116,8 @@
 
 
 <div class="flex flex-col gap-6">
-  <h3 class="font-avenir font-bold text-2xl">Solving information density.</h3>
-  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+  <h3 class="font-display text-2xl font-normal lowercase tracking-[-0.02em]">Solving information density.</h3>
+  <p class="text-lg text-muted leading-relaxed max-w-2xl">
     Information density posed a big problem with this flow. There was more information
     to parse and more decisions to be made. I solved this with a combination of micro
     interactions, filters and progressive disclosure — allowing patients to dig deeper
@@ -137,8 +127,8 @@
 </div>
 
 <div class="flex flex-col gap-6">
-  <h3 class="font-avenir font-bold text-2xl">Navigating complex legislation.</h3>
-  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+  <h3 class="font-display text-2xl font-normal lowercase tracking-[-0.02em]">Navigating complex legislation.</h3>
+  <p class="text-lg text-muted leading-relaxed max-w-2xl">
     The legislation on this kind of app for SHI GPs was incredibly complex at the
     time. To make sure the flow would work in that environment I ran a series of
     workshops with stakeholders from Clinical, Commercial, Legal and Engineering —
@@ -148,8 +138,8 @@
 </div>
 
 <div class="flex flex-col gap-6">
-  <h3 class="font-avenir font-bold text-2xl">User testing under constraints.</h3>
-  <p class="font-inter text-lg text-muted leading-relaxed max-w-2xl">
+  <h3 class="font-display text-2xl font-normal lowercase tracking-[-0.02em]">User testing under constraints.</h3>
+  <p class="text-lg text-muted leading-relaxed max-w-2xl">
     User testing was disrupted by COVID-19 and a problem with our usertesting.com
     account. I recruited 9 colleagues and 4 of their contacts to keep the project
     moving. It didn't give me the depth of validation I was after, but it surfaced
@@ -164,12 +154,12 @@
   
   
   <section class="py-14">
-    <h2 class="font-avenir text-3xl mb-8">Learnings.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-8">Learnings.</h2>
     <ul class="flex flex-col gap-4 max-w-2xl">
       
       <li class="flex gap-4 items-start">
         <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
-        <p class="font-inter text-base leading-relaxed">I still found facilitating workshops with senior stakeholders challenging at this stage. Since then I've been doing more focused group workshops when I need stakeholders to collaborate, and 1-1 expert interviews prior to workshops to save time and focus group discussion.</p>
+        <p class="text-base leading-relaxed">I still found facilitating workshops with senior stakeholders challenging at this stage. Since then I've been doing more focused group workshops when I need stakeholders to collaborate, and 1-1 expert interviews prior to workshops to save time and focus group discussion.</p>
       </li>
       
     </ul>
