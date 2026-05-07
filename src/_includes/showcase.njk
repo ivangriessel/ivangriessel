@@ -17,7 +17,7 @@ layout: base.njk
   {# ── Outcomes ────────────────────────────────────────────────────── #}
   {% if outcomes %}
   <section class="py-14">
-    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-8">Outcomes.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-8">Outcomes</h2>
     <ul class="flex flex-col gap-4 max-w-2xl">
       {% for outcome in outcomes %}
       <li class="flex gap-4 items-start">
@@ -32,14 +32,14 @@ layout: base.njk
   {# ── Problem ─────────────────────────────────────────────────────── #}
   {% if problem %}
   <section class="py-14">
-    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-6">Problem.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-6">Problem</h2>
     <p class="text-base leading-relaxed max-w-2xl">{{ problem }}</p>
   </section>
   {% endif %}
 
   {# ── What I did ──────────────────────────────────────────────────── #}
   <section class="py-14">
-    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-10">What I did.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-10">What I did</h2>
     <div class="flex flex-col gap-16">
       {{ content | safe }}
     </div>
@@ -48,7 +48,7 @@ layout: base.njk
   {# ── Learnings ───────────────────────────────────────────────────── #}
   {% if learnings %}
   <section class="py-14">
-    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-8">Learnings.</h2>
+    <h2 class="font-display text-3xl font-normal lowercase tracking-[-0.02em] mb-8">Learnings</h2>
     <ul class="flex flex-col gap-4 max-w-2xl">
       {% for learning in learnings %}
       <li class="flex gap-4 items-start">
