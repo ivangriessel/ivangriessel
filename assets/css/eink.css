@@ -10,6 +10,7 @@
   --paper-3: #d8d3c4;
   --ink: #1a1a1a;
   --text-2xl: 1.5rem --text-3xl: 1.875rem;
+  --text-3xl: 1.875rem;
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
   --text-6xl: 3.75rem;
@@ -78,6 +79,8 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
+
+/* Showcase titles */
 .showcase-title {
   font-family: "Major Mono Display", monospace;
   font-size: var(--text-4xl);
@@ -85,6 +88,7 @@ body {
   font-weight: 400;
   letter-spacing: -0.02em;
   max-width: var(--container-4xl);
+  text-transform: lowercase;
 }
 @media (min-width: 768px) {
   .showcase-title {
@@ -96,6 +100,29 @@ body {
   .showcase-title {
     font-size: var(--text-6xl);
     line-height: var(--text-6xl--line-height);
+  }
+}
+
+/* Showcase Section Headings */
+.showcase-sec-heading {
+  font-family: "Major Mono Display", monospace;
+  font-size: var(--text-3xl);
+  line-height: var(--text-3xl--line-height);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  text-transform: lowercase;
+}
+@media (min-width: 768px) {
+  .showcase-sec-heading {
+    font-size: var(--text-4xl);
+    line-height: var(--text-4xl--line-height);
+  }
+}
+@media (min-width: 1024px) {
+  .showcase-sec-heading {
+    font-size: var(--text-5xl);
+    line-height: var(--text-5xl--line-height);
   }
 }
 
