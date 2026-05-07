@@ -1016,9 +1016,6 @@ p {
 .leading-relaxed {
   line-height: 1.625;
 }
-.text-muted {
-  color: #1a1a1a;
-}
 
 /* Border */
 .border {
