@@ -777,16 +777,86 @@ body {
   }
 }
 
-/* ── SHOWCASE PAGE TYPOGRAPHY REMAP ───────────── */
-/* Allows showcase pages to use Tailwind's font-avenir / font-inter
-   class names while rendering with the e-ink font stack.           */
-.font-avenir {
-  font-family: "Major Mono Display", monospace !important;
-  font-weight: 400 !important;
-  font-synthesis: none;
-  text-transform: lowercase;
-  letter-spacing: -0.02em;
+/* ── SHOWCASE UTILITIES ───────────────────────── */
+/* Static equivalents of the Tailwind classes used  */
+/* on showcase and work pages. Exact Tailwind v3    */
+/* values — keeps content edits from affecting CSS. */
+
+/* Display */
+.flex         { display: flex; }
+.inline-flex  { display: inline-flex; }
+
+/* Flex */
+.flex-col     { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start  { align-items: flex-start; }
+.shrink-0     { flex-shrink: 0; }
+
+/* Gap */
+.gap-2  { gap: 0.5rem; }
+.gap-4  { gap: 1rem; }
+.gap-6  { gap: 1.5rem; }
+.gap-16 { gap: 4rem; }
+
+/* Sizing */
+.w-2    { width: 0.5rem; }
+.h-2    { height: 0.5rem; }
+.w-80   { width: 20rem; }
+.w-full { width: 100%; }
+
+/* Max-width */
+.max-w-2xl { max-width: 42rem; }
+.max-w-4xl { max-width: 56rem; }
+
+/* Margin */
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mb-6    { margin-bottom: 1.5rem; }
+.mb-8    { margin-bottom: 2rem; }
+.mb-10   { margin-bottom: 2.5rem; }
+
+/* Padding */
+.px-5  { padding-left: 1.25rem; padding-right: 1.25rem; }
+.py-14 { padding-top: 3.5rem;   padding-bottom: 3.5rem; }
+.py-16 { padding-top: 4rem;     padding-bottom: 4rem; }
+
+/* Font family */
+.font-display { font-family: "Major Mono Display", monospace; }
+
+/* Font weight */
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+
+/* Font size */
+.text-sm   { font-size: 0.875rem; line-height: 1.25rem; }
+.text-base { font-size: 1rem;     line-height: 1.5rem; }
+.text-lg   { font-size: 1.125rem; line-height: 1.75rem; }
+.text-2xl  { font-size: 1.5rem;   line-height: 2rem; }
+.text-3xl  { font-size: 1.875rem; line-height: 2.25rem; }
+.text-4xl  { font-size: 2.25rem;  line-height: 2.5rem; }
+
+/* Text utilities */
+.lowercase            { text-transform: lowercase; }
+.tracking-\[-0\.02em\] { letter-spacing: -0.02em; }
+.leading-tight        { line-height: 1.25; }
+.leading-relaxed      { line-height: 1.625; }
+.text-muted           { color: #1a1a1a; }
+
+/* Border */
+.border       { border-width: 1px; border-style: solid; }
+.border-black { border-color: #000; }
+
+/* Border radius */
+.rounded-2xl { border-radius: 1rem; }
+
+/* Responsive — md (≥768px) */
+@media (min-width: 768px) {
+  .md\:px-10    { padding-left: 2.5rem; padding-right: 2.5rem; }
+  .md\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+  .md\:text-5xl { font-size: 3rem;    line-height: 1; }
 }
-.font-inter {
-  font-family: "JetBrains Mono", monospace !important;
+
+/* Responsive — lg (≥1024px) */
+@media (min-width: 1024px) {
+  .lg\:text-5xl { font-size: 3rem;   line-height: 1; }
+  .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
 }
