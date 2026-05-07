@@ -91,24 +91,22 @@
     '</div>';
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var isMobile = window.innerWidth < 768;
-    var scale = isMobile ? 5 : 7;
+  var isMobile = window.innerWidth < 768;
+  var scale = isMobile ? 5 : 7;
 
-    document.querySelectorAll('[data-halftone]').forEach(function (el) {
-      var value = el.getAttribute('data-halftone');
-      el.innerHTML = halftoneText(value, scale);
-    });
-
-    document.querySelectorAll('[data-work-placeholder]').forEach(function (el) {
-      el.innerHTML = workPlaceholder(el.getAttribute('data-work-placeholder'));
-    });
-
-    var gridEl = document.querySelector('[data-contribution-grid]');
-    if (gridEl) {
-      var cols = isMobile ? 24 : 44;
-      var cell = isMobile ? 5 : 6;
-      gridEl.innerHTML = contributionGrid(cols, 5, 9, cell);
-    }
+  document.querySelectorAll('[data-halftone]').forEach(function (el) {
+    var value = el.getAttribute('data-halftone');
+    el.innerHTML = halftoneText(value, scale);
   });
+
+  document.querySelectorAll('[data-work-placeholder]').forEach(function (el) {
+    el.innerHTML = workPlaceholder(el.getAttribute('data-work-placeholder'));
+  });
+
+  var gridEl = document.querySelector('[data-contribution-grid]');
+  if (gridEl) {
+    var cols = isMobile ? 24 : 44;
+    var cell = isMobile ? 5 : 6;
+    gridEl.innerHTML = contributionGrid(cols, 5, 9, cell);
+  }
 })();
