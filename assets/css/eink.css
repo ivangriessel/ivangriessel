@@ -18,6 +18,7 @@ html {
   margin: 0;
   padding: 0;
   min-height: 100%;
+  overflow-x: hidden;
   background: var(--paper);
   background-image: radial-gradient(rgba(26,26,26,0.05) 1px, transparent 1px);
   background-size: 4px 4px;
@@ -30,6 +31,7 @@ body {
   font-size: 14px;
   line-height: 1.55;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ── HOMEPAGE CONTENT WRAPPER ─────────────────── */
@@ -69,9 +71,9 @@ body {
 /* the 1440px page content edges, matching the design */
 .ei-nav { }
 .ei-nav__inner {
-  max-width: 1328px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 10px 0 14px;
+  padding: 10px 56px 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
