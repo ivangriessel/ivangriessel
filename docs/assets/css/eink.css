@@ -543,8 +543,15 @@ body {
 .ei-rec__role {
   margin-top: 4px;
 }
+.ei-work__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
 .ei-work__cta {
   justify-self: end;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 768px) {
   .ei-work__cta {
