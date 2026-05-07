@@ -787,10 +787,14 @@ body {
 .inline-flex  { display: inline-flex; }
 
 /* Flex */
-.flex-col     { flex-direction: column; }
-.items-center { align-items: center; }
-.items-start  { align-items: flex-start; }
-.shrink-0     { flex-shrink: 0; }
+.flex-col        { flex-direction: column; }
+.items-center    { align-items: center; }
+.items-start     { align-items: flex-start; }
+.items-baseline  { align-items: baseline; }
+.shrink-0        { flex-shrink: 0; }
+
+/* Reset browser default paragraph margins */
+p { margin: 0; }
 
 /* Gap */
 .gap-2  { gap: 0.5rem; }
