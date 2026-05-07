@@ -21,7 +21,7 @@ layout: base.njk
     <ul class="flex flex-col gap-4 max-w-2xl">
       {% for outcome in outcomes %}
       <li class="flex gap-4 items-start">
-        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <span class="ei-bullet"></span>
         <p class="leading-relaxed">{{ outcome | md | safe }}</p>
       </li>
       {% endfor %}
@@ -52,7 +52,7 @@ layout: base.njk
     <ul class="flex flex-col gap-4 max-w-2xl">
       {% for learning in learnings %}
       <li class="flex gap-4 items-start">
-        <span class="shrink-0 w-2 h-2 border border-black" style="background:var(--ink); flex-shrink:0; margin-top:6px;"></span>
+        <span class="ei-bullet"></span>
         <p class="leading-relaxed">{{ learning | md | safe }}</p>
       </li>
       {% endfor %}
