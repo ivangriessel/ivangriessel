@@ -1,0 +1,52 @@
+.ei-nav {
+  padding: 32px 56px 0;
+}
+
+.ei-nav__inner {
+  max-width: 1328px;
+  margin: 0 auto;
+  padding: 10px 0 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--ink);
+}
+
+.ei-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ei-nav__mark {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background:
+    radial-gradient(var(--ink) 1px, transparent 1px) 0 0 / 4px 4px,
+    var(--paper);
+  border: 1px solid var(--ink);
+  flex-shrink: 0;
+}
+
+/* tracking + uppercase inherited from shared label rule in typography.css */
+.ei-nav__name {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.ei-nav__name:hover { text-decoration: underline; }
+
+.ei-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* tracking + uppercase inherited from shared label rule in typography.css */
+.ei-nav__links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.ei-nav__links a:hover { text-decoration: underline; }

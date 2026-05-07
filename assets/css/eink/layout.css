@@ -1,0 +1,21 @@
+/* Shared max-width container — nav, page, and footer all use the same bounds */
+.ei-nav,
+.ei-page,
+.ei-footer__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.ei-page {
+  padding: 32px 56px 0;
+}
+
+.ei-section {
+  padding: 32px 0;
+}
+
+.ei-stack {
+  display: grid;
+  gap: 32px;
+  margin-top: 24px;
+}

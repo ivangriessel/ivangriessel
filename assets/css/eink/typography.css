@@ -1,0 +1,61 @@
+/* ── DISPLAY HEADINGS ─────────────────────────── */
+/* Shared font face + weight + case for all display-style headings */
+.ei-display,
+.ei-hero__title,
+.ei-sechead__title,
+.showcase-title,
+.showcase-sec-heading,
+.showcase-sub-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: var(--tracking-display);
+}
+
+/* Initials share the display face but intentionally omit tight tracking */
+.ei-rec__initials {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+/* ── UPPERCASE LABELS ─────────────────────────── */
+/* Shared tracking + transform for all small-caps label elements */
+.ei-mono--xs,
+.ei-nav__name,
+.ei-nav__links a,
+.ei-ph__label,
+.ei-rec__date,
+.ei-side-label {
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.ei-mono    { font-family: var(--font-mono); }
+.ei-mono--xs { font-size: 0.875rem; }
+
+/* ── SHOWCASE HEADINGS ────────────────────────── */
+/* Only unique properties — display font + tracking inherited above */
+.showcase-title {
+  font-size: var(--text-4xl);
+  line-height: var(--text-4xl--line-height);
+  max-width: var(--container-4xl);
+}
+
+.showcase-sec-heading {
+  font-size: var(--text-3xl);
+  line-height: var(--text-3xl--line-height);
+  margin-bottom: 32px;
+}
+
+.showcase-sub-heading {
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+}
+
+/* ── RULE ─────────────────────────────────────── */
+.ei-rule {
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.9;
+}

@@ -1,0 +1,275 @@
+/* ── SECTION HEADER ───────────────────────────── */
+.ei-sechead__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* display font + tracking inherited from shared rule in typography.css */
+.ei-sechead__title {
+  font-size: 84px;
+  line-height: 1;
+  margin: 0;
+}
+
+/* ── CARD BASE ────────────────────────────────── */
+.ei-work,
+.ei-rec {
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 28px 32px;
+  position: relative;
+}
+
+/* ── CORNER DECORATIONS ───────────────────────── */
+/* Shared base for all corner bracket accents */
+.ei-work::before,
+.ei-work::after,
+.ei-rec::before,
+.ei-rec::after,
+.ei-card-corner-tr,
+.ei-card-corner-bl,
+.ei-ph__corner {
+  position: absolute;
+  border-color: var(--ink);
+  border-style: solid;
+  border-width: 0;
+  pointer-events: none;
+}
+
+/* Card pseudo-elements and standalone corner elements share 10px size */
+.ei-work::before,
+.ei-work::after,
+.ei-rec::before,
+.ei-rec::after,
+.ei-card-corner-tr,
+.ei-card-corner-bl {
+  content: "";
+  width: 10px;
+  height: 10px;
+}
+
+.ei-work::before, .ei-rec::before { top: 5px;    left: 5px;  border-top-width: 1px;    border-left-width: 1px;   }
+.ei-work::after,  .ei-rec::after  { bottom: 5px; right: 5px; border-bottom-width: 1px; border-right-width: 1px;  }
+.ei-card-corner-tr                { top: 5px;    right: 5px; border-top-width: 1px;    border-right-width: 1px;  }
+.ei-card-corner-bl                { bottom: 5px; left: 5px;  border-bottom-width: 1px; border-left-width: 1px;   }
+
+/* Placeholder corners are slightly larger */
+.ei-ph__corner       { width: 12px; height: 12px; }
+.ei-ph__corner--tl   { top: 6px;    left: 6px;  border-top-width: 1px;    border-left-width: 1px;   }
+.ei-ph__corner--tr   { top: 6px;    right: 6px; border-top-width: 1px;    border-right-width: 1px;  }
+.ei-ph__corner--bl   { bottom: 6px; left: 6px;  border-bottom-width: 1px; border-left-width: 1px;   }
+.ei-ph__corner--br   { bottom: 6px; right: 6px; border-bottom-width: 1px; border-right-width: 1px;  }
+
+/* ── CARD HEAD ────────────────────────────────── */
+.ei-work__head,
+.ei-rec__head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 28px;
+}
+
+.ei-work__num,
+.ei-rec__num {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  border-right: 1px solid var(--ink);
+}
+
+.ei-work__org,
+.ei-rec__name {
+  font-size: 24px;
+  font-weight: 400;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ei-work__year              { font-weight: 400; }
+.ei-work__role, .ei-rec__role { margin-top: 4px; }
+
+.ei-work__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.ei-work__cta {
+  justify-self: end;
+  position: relative;
+  z-index: 2;
+}
+
+/* tracking + uppercase inherited from shared label rule in typography.css */
+.ei-rec__date {
+  font-size: 10.5px;
+  text-align: right;
+  display: grid;
+  gap: 4px;
+}
+
+/* ── WORK BODY ────────────────────────────────── */
+.ei-work__body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.ei-work__visual {
+  background: var(--paper-2);
+  border: 1px solid var(--ink);
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  max-width: 100%;
+  align-self: start;
+}
+
+.ei-work__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ei-work__title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+
+.ei-work__blurb {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0 0 16px;
+  text-wrap: pretty;
+}
+
+.ei-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 1rem;
+}
+
+/* ── PLACEHOLDER ──────────────────────────────── */
+.ei-ph {
+  position: absolute;
+  inset: 0;
+}
+
+.ei-ph__inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ei-ph__inner svg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+}
+
+/* tracking + uppercase inherited from shared label rule in typography.css */
+.ei-ph__label {
+  position: relative;
+  font-size: 11px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 6px 12px;
+  text-align: center;
+}
+
+/* ── REC BODY ─────────────────────────────────── */
+.ei-rec__body {
+  display: grid;
+  grid-template-columns: 168px 1fr 220px;
+  gap: 36px;
+}
+
+.ei-rec__portrait {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+/* display font inherited from shared rule in typography.css */
+.ei-rec__initials {
+  width: 132px;
+  height: 132px;
+  border: 1px solid var(--ink);
+  background: var(--paper-2);
+  background-image: radial-gradient(rgba(26, 26, 26, 0.18) 1px, transparent 1px);
+  background-size: 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+}
+
+.ei-rec__quote-col { position: relative; }
+
+.ei-rec__quote {
+  font-size: 22px;
+  line-height: 1.34;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+  max-width: 768px;
+  text-wrap: pretty;
+}
+
+.ei-rec__bodytext {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 768px;
+  text-wrap: pretty;
+}
+
+.ei-rec__side {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+/* ── SIDE BLOCKS ──────────────────────────────── */
+.ei-side-block {
+  border-top: 1px solid var(--ink);
+  padding-top: 10px;
+}
+
+/* tracking + uppercase inherited from shared label rule in typography.css */
+/* 0.16em overrides the 0.14em default — slightly wider for readability at bold weight */
+.ei-side-label {
+  font-size: 0.875rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.ei-side-value {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ── RECS FOOTER ──────────────────────────────── */
+.ei-recs__more { margin-top: 32px; }
+
+.ei-recs__more-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  gap: 16px;
+}

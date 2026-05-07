@@ -1,0 +1,70 @@
+/* ── MOBILE (≤768px) ──────────────────────────── */
+@media (max-width: 768px) {
+  /* Layout */
+  .ei-page    { padding: 20px 18px 0; font-size: 13px; }
+  .ei-section { padding: 28px 0; }
+  .ei-stack   { gap: 28px; }
+
+  /* Nav */
+  .ei-nav         { padding: 16px 18px 0; }
+  .ei-nav__inner  { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .ei-nav__links  { flex-direction: column; align-items: flex-start; gap: 6px; }
+
+  /* Hero */
+  .ei-hero__body    { grid-template-columns: 1fr; gap: 32px; }
+  .ei-hero__title   { font-size: 56px; line-height: 1.05; word-break: break-word; }
+  .ei-hero__aside   { justify-items: stretch; }
+  .ei-hero__portrait { width: 100%; }
+  .ei-hero__photo   { width: 100%; height: auto; }
+
+  /* Section header */
+  .ei-sechead__title { font-size: 48px; line-height: 1.05; word-break: break-word; }
+
+  /* Cards */
+  .ei-work, .ei-rec           { padding: 20px 18px; }
+  .ei-work__head, .ei-rec__head { grid-template-columns: auto 1fr; gap: 16px; }
+  .ei-work__num, .ei-rec__num   { padding-right: 14px; }
+  .ei-work__org, .ei-rec__name  { font-size: 18px; }
+  .ei-work__body  { grid-template-columns: 1fr; gap: 18px; }
+  .ei-work__title { font-size: 24px; }
+  .ei-work__visual { width: 100%; }
+  .ei-work__cta   { display: none; }
+
+  /* Rec */
+  .ei-rec__body     { grid-template-columns: 1fr; gap: 22px; }
+  .ei-rec__date     { display: none; }
+  .ei-rec__initials { width: 92px; height: 92px; font-size: 38px; }
+  .ei-rec__quote    { font-size: 18px; }
+
+  /* About */
+  .ei-about { grid-template-columns: 1fr; gap: 24px; margin-top: 24px; }
+
+  /* Footer */
+  .ei-footer__inner { padding: 40px 18px 32px; }
+  .ei-footer__row   { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+
+/* ── TABLET+ (≥768px) ─────────────────────────── */
+@media (min-width: 768px) {
+  /* Showcase headings step up one size */
+  .showcase-title       { font-size: var(--text-5xl); line-height: var(--text-5xl--line-height); }
+  .showcase-sec-heading { font-size: var(--text-4xl); line-height: var(--text-4xl--line-height); }
+  .showcase-sub-heading { font-size: var(--text-3xl); line-height: var(--text-3xl--line-height); }
+
+  /* Tailwind responsive utilities */
+  .md\:px-10    { padding-left: 2.5rem;          padding-right: 2.5rem; }
+  .md\:text-4xl { font-size: var(--text-4xl);     line-height: 2.5rem; }
+  .md\:text-5xl { font-size: var(--text-5xl);     line-height: 1; }
+}
+
+/* ── DESKTOP (≥1024px) ────────────────────────── */
+@media (min-width: 1024px) {
+  /* Showcase headings step up one more size */
+  .showcase-title       { font-size: var(--text-6xl); line-height: var(--text-6xl--line-height); }
+  .showcase-sec-heading { font-size: var(--text-5xl); line-height: var(--text-5xl--line-height); }
+  .showcase-sub-heading { font-size: var(--text-4xl); line-height: var(--text-4xl--line-height); }
+
+  /* Tailwind responsive utilities */
+  .lg\:text-5xl { font-size: var(--text-5xl); line-height: 1; }
+  .lg\:text-6xl { font-size: var(--text-6xl); line-height: 1; }
+}

@@ -1,0 +1,12 @@
+/* max-width + margin inherited from shared container rule in layout.css */
+.ei-footer__inner {
+  padding: 40px 56px 32px;
+}
+
+.ei-footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+}

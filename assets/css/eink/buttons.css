@@ -1,0 +1,26 @@
+.ei-btn {
+  font-size: 0.875rem;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 10px 16px;
+  background: var(--paper);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.ei-btn:hover { background: var(--ink); color: var(--paper); }
+
+.ei-btn--primary { background: var(--ink); color: var(--paper); }
+.ei-btn--primary:hover { background: var(--paper); color: var(--ink); }
+
+.ei-btn__arrow {
+  font-size: 14px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
