@@ -126,6 +126,28 @@ body {
   }
 }
 
+/* Showcase Sub Headings */
+.showcase-sub-heading {
+  font-family: "Major Mono Display", monospace;
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+}
+@media (min-width: 768px) {
+  .showcase-sub-heading {
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+  }
+}
+@media (min-width: 1024px) {
+  .showcase-sub-heading {
+    font-size: var(--text-4xl);
+    line-height: var(--text-4xl--line-height);
+  }
+}
+
 /* ── RULE ─────────────────────────────────────── */
 .ei-rule {
   height: 1px;
